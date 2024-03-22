@@ -8,7 +8,9 @@
     "dev": "tsnd --respawn --files -r @babel/register --inspect -- src/index.ts",
     "build": "babel ./src -d ./dist --extensions .ts --copy-files",
     "typecheck": "tsc",
-    "start": "node dist/index.js",
+    "start": "node index.js",
+    "start1": "node index（修改密码）.js",
+    "start2": "node index（六位数字）",
     "lint:base": "eslint --ext .js,.json,.ts",
     "lint": "yarn lint:base src",
     "prepare": "simple-pre-commit"
@@ -40,5 +42,12 @@
   },
   "engines": {
     "node": ">=16"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.3",
+    "jsonwebtoken": "^9.0.2",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0"
   }
 }
